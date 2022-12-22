@@ -8,8 +8,15 @@ import LibRaryIndex from '../components/library/LibRaryIndex'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
+  mode: 'hash',
+  // base: process.env.BASE_URL,
   routes: [
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
     {
       path: '/home',
       name: 'Home',
@@ -33,11 +40,6 @@ export default new Router({
           }
         }
       ]
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login
     }
   ]
 })

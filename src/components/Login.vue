@@ -29,9 +29,6 @@ export default {
   methods: {
     login() {
       var _this = this
-      console.log('this :' + this)
-      console.log('this.$store.state :' + this.$store.state)
-      console.log('this.$route:' + this.$route)
       this.$axios
         .post('/login', {
           username: this.loginForm.username,

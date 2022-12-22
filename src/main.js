@@ -14,7 +14,6 @@ Vue.use(ElementUI)
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requireAuth) {
-    // debugger
     if (store.state.user.username) {
       next()
     } else {
