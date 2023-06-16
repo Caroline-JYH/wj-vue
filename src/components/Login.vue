@@ -1,7 +1,7 @@
 <template>
   <body id="poster">
     <el-form class="login-container" label-position="left" label-width="0px">
-      <h3 class="login_title">系统登录</h3>
+      <h3 class="login_title">系统denglu</h3>
       <el-form-item>
         <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号"/>
       </el-form-item>
@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     login() {
+      console.log('login入口')
       var _this = this
       this.$axios
         .post('/login', {
@@ -35,6 +36,8 @@ export default {
           password: this.loginForm.password
         })
         .then(succcessResponse => {
+          console.log('username=' + this.loginForm.username)
+          console.log('password=' + this.loginForm.password)
           if (succcessResponse.data.code === 200) {
             _this.$store.commit('login', _this.loginForm)
             var path = this.$route.query.redirect
