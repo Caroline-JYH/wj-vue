@@ -43,46 +43,12 @@ export default {
 }
 </script>
 <style scoped>
-.flex-container{
+.container{
   display:flex;
-  flex-flow:row wrap;
-  /* justify-content: center; */
-  /* align-items: center; */
+  flex-flow:row;
   align-content: flex-start;
   max-width: 600px;
   height:200px;
-  margin: auto;
-  background-color: rgba(156, 240, 108, 0.301);
 
-}
-.flex-container>div{
- width: 50px;
- height: 50px;
- font-size: 22px;
- display: flex;
- flex: row wrap;
- justify-content: center;
- align-items: center;
-}
-.flex-container div:nth-of-type(n){
-  background-color: rgba(119, 232, 240, 0.788);
-}
-
-.flex-container div:nth-of-type(2n){
-  background-color:  rgb(230, 178, 81);
-}
-.flex-container div:nth-of-type(3n){
-  background-color: rgba(118, 105, 233, 0.774);
-}
-
-flex-container div:nth-of-type(4n){
-  background-color:  rgb(214, 123, 199);
-}
-
-.flex-container div:nth-of-type(1){
-  /* order: 1; */
-  /* flex-grow: 4; */
-  /* flex-basis: 100px; */
-  flex:0 0 100px;
 }
 </style>
