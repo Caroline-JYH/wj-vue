@@ -45,10 +45,13 @@ export default {
 <style scoped>
 .container{
   display:flex;
-  flex-flow:row;
-  align-content: flex-start;
-  max-width: 600px;
-  height:200px;
-
+  justify-content: flex-start;
+}
+.imageFather{
+  display:flex;
+  flex-direction: column;
+  flex-grow:1;
+  margin: 10px 100px;
+  flex-grow: 1;
 }
 </style>
